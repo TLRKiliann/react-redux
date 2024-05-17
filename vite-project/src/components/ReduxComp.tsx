@@ -1,4 +1,5 @@
 //import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { actions } from './store';
 
@@ -6,16 +7,18 @@ type CountActionTypes = {
     counter: number;
     increment: () => void;
     decrement: () => void;
+    reset: () => void;
 }
 
-export function ReduxComp({counter, increment, decrement}: CountActionTypes) {
+export function ReduxComp({counter, increment, decrement, reset}: CountActionTypes) {
     return (
         <div>
         
-            <span>Counter: {counter}</span>
+            <h2>Counter: {counter}</h2>
 
             <button type="button" onClick={()=> increment()}>+</button>
             <button type="button" onClick={() => decrement()}>-</button>
+            <button type="button" onClick={() => reset()}>RESET</button>
         </div>
     )
 }
@@ -31,10 +34,11 @@ const mapStateToProps = (state: {counter: number}) => ({
 });
 
 // map actions to dispatch
-const mapDispatchToProps = () => ({
-    increment: () => actions.increment(),
-    decrement: () => actions.decrement()
-});
+const mapDispatchToProps = (dispatch: any) => bindActionCreators({
+    increment: actions.increment,
+    decrement: actions.decrement,
+    reset: actions.reset
+}, dispatch);
 
 // connect react-redux !
 export default connect (
