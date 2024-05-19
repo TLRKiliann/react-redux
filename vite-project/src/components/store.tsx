@@ -16,9 +16,9 @@ const actionTypes = {
     RESET: 'reset'
 };
 
+//increment: () => ({ type: actionTypes.INCREMENT }),
+//decrement: () => ({ type: actionTypes.DECREMENT })
 export const actions = {
-    /* increment: () => ({ type: actionTypes.INCREMENT }),
-    decrement: () => ({ type: actionTypes.DECREMENT }) */
     increment: () => ({ type: 'increment' } as const),
     decrement: () => ({ type: 'decrement' } as const),
     reset: () => ({ type: 'reset' } as const)
@@ -38,7 +38,7 @@ const reducer = (state: StateTypes = initialCount, action: ActionTypes): StateTy
     }
 }
 
-// createStore is depreciated
+// createStore is deprecated
 export const store = configureStore({
     reducer
 });
