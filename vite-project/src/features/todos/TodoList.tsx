@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+//import { useSelector, useDispatch } from 'react-redux';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { getTodos, removeTodo, updateTodo, addTodo } from './todosSlice';
 
@@ -10,6 +11,7 @@ type TodoProps = {
 const TodoList: React.FC = () => {
     const todos = useAppSelector((state) => state.todos);
     const dispatch = useAppDispatch();
+    
     const [newTodoText, setNewTodoText] = useState<string>('');
     const [updateText, setUpdateText] = useState<string>('');
     const [boolChange, setBoolChange] = useState<boolean>(false);
