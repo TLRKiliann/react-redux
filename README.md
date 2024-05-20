@@ -6,7 +6,9 @@ It's not always necessary to use Redux. It's depends of many things.
 
 Local state (react) or global state (redux store) ?
 
-If you wants access to data from components without relation between them, you can use redux or useReducer & useContext from React. It's a question of preference.
+Immutability: redux copy or make a new version of state.
+
+If you wants access to data from components without relation between them, you can use `react-redux` or `useReducer & useContext` from React. It's a question of preference.
 
 ## Lib installed
 
@@ -45,13 +47,33 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 ---
 
-`components/ReduxComp.tsx`
+## Example of old manner to use Redux with React:
 
-ReduxComp is called from App.tsx and require store:
+- `app/ExampleOfOldStore.tsx`
+- `features/OldReduxManner.tsx`
 
-```
-import { actions } from './store';
-```
+---
 
+## How to use react-redux
 
+Store:
+
+`app/store.ts`
+`app/hooks.ts`
+
+Counter:
+
+`features/counter/counterSlice.ts`
+`features/counter/Counter.tsx`
+
+Todo:
+
+`features/todos/todosSlice.tsx`
+`features/todos/TodoList.tsx`
+
+## useReducer of React only:
+
+`components/SimpleReducer.tsx`
+
+---
 
