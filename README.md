@@ -8,7 +8,7 @@ Local state (react) or global state (redux store) ?
 
 **Immutability**: Redux expects that all state updates are done immutably. We'll look at where and how this is important a bit later, as well as some easier ways to write immutable update logic.
 
-*Reducer*: A reducer is a function that receives the current state and an action object, decides how to update the state if necessary, and returns the new state: (state, action) => newState. You can think of a reducer as an event listener which handles events based on the received action (event) type.
+**Reducer**: A reducer is a function that receives the current state and an action object, decides how to update the state if necessary, and returns the new state: (state, action) => newState. You can think of a reducer as an event listener which handles events based on the received action (event) type.
 
 If you wants to access data from components without relation between them, you can use `react-redux` or `useReducer & useContext` from React. It's a question of preference.
 
@@ -62,27 +62,25 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 **Store:**
 
-`app/store.ts`
-`app/hooks.ts`
+- `app/store.ts`
+- `app/hooks.ts`
 
 **Counter:**
 
-`features/counter/counterSlice.ts` (actions)
-`features/counter/Counter.tsx`
+- `features/counter/counterSlice.ts` (actions)
+- `features/counter/Counter.tsx`
 
 **Todo:**
 
-`features/todos/todosSlice.tsx` (actions)
-`features/todos/TodoList.tsx`
+- `features/todos/todosSlice.tsx` (actions)
+- `features/todos/TodoList.tsx`
 
-**Actions:**
-
-Initial setup:
+**Initial setup:**
 
     A Redux store is created using a root reducer function.
     The store calls the root reducer once, and saves the return value as its initial state.
 
-Updates:
+**Updates:**
 
     Something happens in the app, such as a user clicking a button.
     The app code dispatches an action to the Redux store, like dispatch({type: 'counter/increment'}).
