@@ -1,6 +1,5 @@
 import { useReducer } from 'react'
 
-
 type StateTypes = {
     count: number;
 }

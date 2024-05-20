@@ -1,19 +1,18 @@
-import ReduxComp from './components/ReduxComp';
-import ReducerContext from './components/ReducerContext';
+import Counter from './features/counter/Counter';
 import SimpleReducer from './components/SimpleReducer';
-import './App.css'
+import TodoList from './features/todos/TodoList';
+import './App.css';
 
 function App() {
   return (
     <>
       <h2 className='title-tuto'>React-Redux</h2>
-      <ReduxComp />
-      <h2 className='title-tuto'>useReducer & useContext</h2>
-      <ReducerContext />
-      <h2 className='title-tuto'>Simple Reducer</h2>
+      <Counter />
+      <h2 className='title-tuto'>Simple Reducer (useReducer)</h2>
       <SimpleReducer />
+      <h2 className='title-tuto'>React-Redux</h2>      
+      <TodoList />
     </>
   )
 }
-
-export default App
+export default App;
