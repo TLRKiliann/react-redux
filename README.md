@@ -171,4 +171,4 @@ References: https://redux.js.org/
 
 I will make a tutorial about redux with Nextjs soon.
 
-Enjoy it ! |koala|
+Enjoy it ! :koala:
