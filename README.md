@@ -163,12 +163,8 @@ just a reducer from React for a demo.
 
 useContext required another application because it's not possible to add a `context Provider` with a `store Provider`. But we can use it with a reducer normaly setup in same file.
 
-References: https://redux.js.org/
-
 ---
 
-## Next
-
-I will make a tutorial about redux with Nextjs soon.
+References: https://redux.js.org/
 
 Enjoy it ! :koala:
