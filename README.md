@@ -178,7 +178,7 @@ No global stores:
 
 https://docs.pmnd.rs/zustand/guides/nextjs
 
-(Good example with NextJS similarly as useContext with store and provider)
+(Good example with NextJS similarly that useContext with store and provider)
 
 ---
 
