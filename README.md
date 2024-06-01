@@ -163,8 +163,23 @@ just a reducer from React for a demo.
 
 useContext required another application because it's not possible to add a `context Provider` with a `store Provider`. But we can use it with a reducer normaly setup in same file.
 
+- References: https://redux.js.org/
+
 ---
 
-References: https://redux.js.org/
+## Zustand
+
+You can also learn Zustand. It's applicable with Next.js 14 server-action:
+
+https://medium.com/@mak-dev/zustand-with-next-js-14-server-components-da9c191b73df
+
+No global stores: 
+- Because the store should not be shared across requests, it should not be defined as a global variable. Instead, the store should be created per request.
+
+https://docs.pmnd.rs/zustand/guides/nextjs
+
+(Good example with NextJS similarly as useContext with store and provider)
+
+---
 
 Enjoy it ! :koala:
